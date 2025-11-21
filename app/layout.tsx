@@ -8,6 +8,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
+      <head>
+        <title>Next JS - Lopez</title>
+        <meta name="description" content="Proyecto creado con Next Js y Tailwind CSS" />
+      </head>
       <body className={`${inter.className} antialiased`}>{children}</body>
     </html>
   );
