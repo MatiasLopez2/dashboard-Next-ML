@@ -2,11 +2,10 @@ import { Suspense } from 'react';
 import { InvoiceSkeleton } from '@/app/ui/skeletons';
 import CustomersTable from '@/app/ui/customers/table';
 import { lusitana } from '@/app/ui/fonts';
-import { fetchFilteredCustomers } from '@/app/lib/data';
- 
-export default async function Page({ searchParams }: { searchParams?: { query?: string } }) {
-  const query = searchParams?.query || '';
-  const customers = await fetchFilteredCustomers(query);
+import { fetchFilteredCustomers2 } from '@/app/lib/data';
+
+async function Page( ) {
+  const customers = await fetchFilteredCustomers2();
 
   return (
     <div className="w-full">
@@ -16,3 +15,4 @@ export default async function Page({ searchParams }: { searchParams?: { query?: 
     </div>
   );
 }
+export default Page;
